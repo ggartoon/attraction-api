@@ -23,10 +23,11 @@ app.get('/Toon_test', function (req, res, next) {
 
 app.get('attractions', function(req, res, next){
     pool.query("SELECT * FROM attractions", function(err, rows, fields){
+        console.log(err)
         res.json(rows)
     })
 })
 
-app.listen(5000, function () {
-  console.log('web server listening on port 5000')
+app.listen(80, function () {
+  console.log('web server listening on port 80')
 })
